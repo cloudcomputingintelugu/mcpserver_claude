@@ -14,6 +14,8 @@ python3 --version
 
 python3.11 --version
 
+# Install UV
+# -------------------
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 source ~/.bashrc
