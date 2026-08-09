@@ -8,13 +8,33 @@ Install uv by running pip install uv
 
 Run "uv init my-first-mcp-server" to create a project directory
 
-Run "uv add "mcp[cli]"" to add mcp cli in your project
+cat /etc/os-release
 
-Few folks may get type errors for which you can run pip install --upgrade typer to upgrade typer library to its latest version
+python3 --version
 
-Write code in main.py for leave management server
+python3.11 --version
 
-Install this server inside Claude desktop by running uv run mcp install main.py in the project directory
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-Kill any running instance of Claude from Task Manager. Restart Claude Desktop
-In Claude desktop, now you will see tools from this server
+source ~/.bashrc
+
+uv run --python 3.11 python --version
+
+
+# Go to the MCP project
+
+cd ~/my-first-mcp-server
+
+uv sync
+
+uv pip show fastmcp
+
+uv pip show mcp
+
+uv sync
+
+uv pip show boto3
+
+uv run python test_dynamodb.py
+
+uv run python main.py
